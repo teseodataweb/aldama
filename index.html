@@ -59,6 +59,49 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
+        .price-tooltip-wrap {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.price-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    max-width: 200px;
+    background-color: #EED26E;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+    left: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.price-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 10px;
+    margin-left: -5px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #FF5A5F transparent transparent transparent;
+}
+
+.price-tooltip-wrap:hover .price-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+    </style>
+    <style>
         .modal {
           display: none;
           position: fixed;
@@ -672,8 +715,12 @@ Property Area
                         <h4 class="property-card-title"><a href="property-details.html">Modelo Roble</a></h4>
                         <p class="property-card-text">Departamento funcional y cómodo con excelente distribución interior. Ideal para residencia o inversión segura.</p>
                         <div class="property-card-price-meta">
-                            <h5 class="property-card-price">Desde $2,865,330 MXN</h5>
+                            <div class="price-tooltip-wrap">
+                              <h5 class="property-card-price">$2,926,075.00 MXN *</h5>
+                              <div class="price-tooltip">*Precio con 50% de enganche</div>
+                            </div>
                         </div>
+                          
                         <div class="property-card-meta">
                             <span><img src="assets/img/icon/property-icon1-1.svg" alt="img">2 recámaras</span>
                             <span><img src="assets/img/icon/property-icon1-2.svg" alt="img">2 baños</span>
@@ -691,7 +738,7 @@ Property Area
                 </div>
             </div>
 
-            <div class="property-card-wrap">
+            <!-- <div class="property-card-wrap">
                 <div class="property-thumb img-shine" data-mask-src="assets/img/shape/property-card1-img-mask.png">
                     <img src="assets/img/property/property1-2.png" alt="img">
                 </div>
@@ -727,7 +774,7 @@ Property Area
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="property-card-wrap">
                 <div class="property-thumb img-shine" data-mask-src="assets/img/shape/property-card1-img-mask.png">
@@ -735,13 +782,16 @@ Property Area
                 </div>
                 <div class="property-card">
                     <div class="property-card-number">
-                        03 </div>
+                        02 </div>
                     <div class="property-card-details">
-                        <span class="property-card-subtitle">Unidade 3</span>
+                        <span class="property-card-subtitle">Unidade </span>
                         <h4 class="property-card-title"><a href="#">Parota</a></h4>
                         <p class="property-card-text">Vista privilegiada al exterior y mayor amplitud. Diseñado para quienes valoran el confort y la proyección.</p>
                         <div class="property-card-price-meta">
-                            <h5 class="property-card-price">Desde $3,223,584 MXN</h5>
+                            <div class="price-tooltip-wrap">
+                              <h5 class="property-card-price">$3,291,923.98 MXN *</h5>
+                              <div class="price-tooltip">*Precio con 50% de enganche</div>
+                            </div>
                         </div>
                         <div class="property-card-meta">
                             <span><img src="assets/img/icon/property-icon1-1.svg" alt="img">2 recámaras</span>
