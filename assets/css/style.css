@@ -88,12 +88,12 @@ Version: 1.0.0
 /*------------------- 1.2. Function -------------------*/
 /*------------------- 1.3. Variable-------------------*/
 :root {
-  --theme-color: #1C2D37;
-  --theme-color2: #EED26E;
+  --theme-color: #363C2B;
+  --theme-color2: #ffffff;
   --title-color: #0D0D0C;
   --title-dark: #364440;
   --body-color: #6E7070;
-  --smoke-color: #C0CDD1;
+  --smoke-color: #ffffff;
   --smoke-color2: #666666;
   --smoke-color3: #C2D6C2;
   --black-color: #000000;
@@ -103,7 +103,7 @@ Version: 1.0.0
   --gray-color2: #E5E4E9;
   --gray-color3: #F3F5F6;
   --white-color: #ffffff;
-  --light-color: #A4B5BA;
+  --light-color: #c5c5c5;
   --yellow-color: #E2B93B;
   --success-color: #27AE60;
   --error-color: #EB5757;
@@ -10251,7 +10251,7 @@ ol.wp-block-rss {
 
 /* Footer Area Default---------------------------------- */
 .footer-default {
-  --body-color: #A4B5BA;
+  --body-color: #a4b5ba;
 }
 
 .footer-default .widget-area {
@@ -10261,7 +10261,7 @@ ol.wp-block-rss {
 
 /* Footer Area 1---------------------------------- */
 .footer-layout1 {
-  --body-color: #1C2D37;
+  --body-color: #363C2B;
   /* Extra large devices */
   /* Medium Large devices */
   /* Medium devices */
@@ -15417,7 +15417,7 @@ table.woocommerce-product-attributes {
 
 .cart_totals {
   border: 1px solid var(--theme-color);
-  --body-color: #1C2D37;
+  --body-color: #363C2B;
 }
 
 .cart_totals th,
