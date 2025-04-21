@@ -105,9 +105,10 @@
         visibility: visible;
         opacity: 1;
     }
+    </style>
 
-        </style>
-        <style>
+
+    <style>
             .modal {
             display: none;
             position: fixed;
@@ -182,8 +183,33 @@
         });
         });
     </script>
-    
-        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.logo-swiper', {
+          slidesPerView: 4,
+          spaceBetween: 30,
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          },
+          breakpoints: {
+            320: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 }
+          }
+        });
+      </script>
 
     </head>
 
@@ -568,7 +594,7 @@
                         <div class="title-area">
                             <span class="shadow-title">LIXXUS</span>
                             <h2 class="sec-title text-white">LIXXUS Capital</h2>
-                            <p class="sec-text text-white">Una firma con amplia experiencia en desarrollo inmobiliario, y Silov Real Estate, especialistas en vivienda residencial y de lujo en Puerto Vallarta.
+                            <p class="sec-text text-white">Somos una firma con amplia experiencia en desarrollo inmobiliario, y Silov Real Estate, especialistas en vivienda residencial y de lujo en Puerto Vallarta.
 
                                <br> Juntos impulsan un proyecto pensado para quienes buscan vivir o invertir en un lugar con excelente ubicación, respaldo profesional y un acompañamiento cercano en cada etapa del proceso.</p>
                         </div>
@@ -578,6 +604,7 @@
                             <a href="#property-sec" class="th-btn btn-mask th-btn-icon">Ver más</a>
                         </div>
                     </div>
+
                 </div>
                 <div class="row gy-4 align-items-center">
                     <!-- PRIMER VISOR -->
@@ -586,8 +613,23 @@
                         <div class="image-container" id="panorama-container-1"></div>
                         <img class="panorama-img" src="assets/img/normal/about_1_1.png" alt="Panorama Image 1" style="display: none;" />
                     </div>
+  
                     </div>
-                </div>                 
+                </div>
+                <div class="container my-5">
+                    <div class="row align-items-center text-center">
+                      <div class="col-lg-4 col-md-4 mb-3">
+                        <h2 class="text-white">Somos parte de</h2>
+                      </div>
+                      <div class="col-lg-4 col-md-4 mb-3">
+                        <img src="assets/img/logorealtors.png" alt="Logo 1" class="img-fluid logo-afiliado">
+                      </div>
+                      <div class="col-lg-4 col-md-4 mb-3">
+                        <img src="assets/img/logoampi.png" alt="Logo 2" class="img-fluid logo-afiliado">
+                      </div>
+                    </div>
+                  </div>
+                  
             </div>
         </div>
 
@@ -606,7 +648,8 @@
                             </div>
                             <div class="box-content">
                                 <h3 class="box-title"><a href="#">Alta Plusvalía</a></h3>
-                                <p class="box-text">Se ubica en El Pitillal, una zona con gran dinamismo urbano y proyección de crecimiento en Puerto Vallarta. Tu inversión crece el 10.8%.</p>
+                                <p class="box-text">Tu inversión crece <strong>10.8%</strong> anual. 
+                                    Con un modelo Parota, estarías ganando hasta <strong>$348,000 MXN</strong> al año en la valorización de tu propiedad.</p>
                             </div>
                         </div>
                     </div>
@@ -730,7 +773,8 @@
                         <div class="title-area">
                             <span class="shadow-title">DOS</span>
                             <h2 class="sec-title text-white">Modelos</h2>
-                            <p class="sec-text text-white">Departamento funcional y cómodo con excelente distribución interior. Ideal para residencia o inversión segura.</p>
+                            <p class="sec-text text-white">Departamentos que combinan amplitud, luz natural y una distribución pensada para vivir con comodidad cada momento.
+                                Ya sea como hogar permanente o como inversión, cada espacio está diseñado para adaptarse a ti.</p>
                         </div>
                     </div>
                 </div>
@@ -743,8 +787,9 @@
                             01 </div>
                         <div class="property-card-details">
                             <span class="property-card-subtitle">Modelo</span>
-                            <h4 class="property-card-title"><a href="property-details.html">Roble</a></h4>
-                            <p class="property-card-text">Departamento funcional y cómodo con excelente distribución interior. Ideal para residencia o inversión segura.</p>
+                            <h4 class="property-card-title"><a href="#">Roble</a></h4>
+                            <p class="property-card-text">Un espacio acogedor con distribución inteligente, ideal para quienes buscan practicidad sin renunciar al confort.
+                                Perfecto para vivir a tu ritmo.</p>
                             <div>
                                 <h5 class="property-card-price">2,926,075.00 MXN *</h5>
                                 <p class="property-card-price-legend" style="font-style: italic;">* Precio a 8% de descuento y 50% de enganche.</p>
@@ -1064,7 +1109,6 @@
         <section class="download-area-1 space-top overflow-hidden" data-bg-src="assets/img/bg/download-bg-1-1.png" data-opacity="5" data-overlay="title">
             <div class="container">
                 <div class="row gx-40">
-
                     <div class="col-xxl-6 col-lg-7 align-self-center">
                         <div class="space-bottom text-lg-start text-center">
                             <div class="title-area mb-30">
@@ -1296,7 +1340,7 @@
                                 <div class="widget footer-widget">
                                     <div class="th-widget-about">
                                         <div class="about-logo">
-                                            <a href="index.html"><img src="assets/img/logonegro.png" alt="Lixxs Capital" style="width: 50%;"></a>
+                                            <a href="index.html"><img src="assets/img/logolixxus.png" alt="Lixxs Capital" style="width: 50%;"></a>
                                         </div>
                                         <p class="about-text">Desarrollamos espacios pensados para vivir mejor e invertir con confianza.
                                             Hacienda Aldama es un proyecto respaldado por LIXXUS Capital.</p>
@@ -1304,6 +1348,21 @@
                                             <a href="https://www.facebook.com/LixxusCapital"><i class="fab fa-facebook-f"></i></a>
                                             <a href="https://wa.me/523222054185"><i class="fab fa-whatsapp"></i></a>
                                             <a href="https://www.instagram.com/lixxuscapital/"><i class="fab fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-4">
+                                <div class="widget footer-widget">
+                                    <div class="th-widget-about">
+                                        <div class="about-logo">
+                                            <a href="index.html"><img src="assets/img/logosilov.png" alt="Lixxs Capital" style="width: 50%;"></a>
+                                        </div>
+                                        <p class="about-text">Agencia inmobiliaria especializada en vivienda residencial y de lujo en Puerto Vallarta y Bahía de Banderas.</p>
+                                        <div class="th-social style3">
+                                            <a href="https://www.facebook.com/profile.php?id=100064228984892"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="https://wa.me/523222748310"><i class="fab fa-whatsapp"></i></a>
+                                            <a href="https://www.instagram.com/silovrealestate/"><i class="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
