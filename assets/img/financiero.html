@@ -1,0 +1,120 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulador Rancho Nuevo – MZC</title>
+  <link rel="icon" href="favicon.ico">
+  <style>
+    body { font-family: sans-serif; margin: 0; background: #f4f4f4; }
+    .container { display: flex; flex-wrap: nowrap; }
+    .left, .right { flex: 1; padding: 2rem; box-sizing: border-box; height: 100vh; overflow-y: auto; }
+    .left { background: #fff; }
+    .right { background: #eef; display: flex; flex-direction: column; align-items: center; }
+    label { display: block; margin-top: 1rem; }
+    input, select { width: 100%; padding: 0.5rem; font-size: 1rem; }
+    .result { margin-top: 2rem; background: #fff; padding: 1rem; border-radius: 8px; width: 100%; max-width: 500px; box-shadow: 0 0 10px #ccc; }
+    img { max-width: 100%; border-radius: 8px; }
+    table { width: 100%; margin-top: 1rem; border-collapse: collapse; background: #f9f9f9; }
+    th, td { padding: 0.5rem; border: 1px solid #ccc; text-align: left; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>Rancho Nuevo – Simulador Financiero</h1>
+      <p><strong>Precio base del lote:</strong> <span id="precioBase">$1,000,000</span></p>
+
+      <label>Enganche (%)</label>
+      <input type="number" id="enganche" value="30" oninput="calcular()">
+      <p><em>→ Equivale a: <span id="montoEnganche">$300,000</span></em></p>
+
+      <label>Plazo (años)</label>
+      <input type="number" id="plazo" value="15" min="1" max="15">
+
+      <label>Perfil financiero del cliente</label>
+      <select id="riesgo">
+        <option value="1">Perfil Bajo (ingresos altos, comprobables)</option>
+        <option value="2" selected>Perfil Medio (ingresos medios)</option>
+        <option value="3">Perfil Alto (informal, sin comprobantes)</option>
+      </select>
+
+      <label>Zona del lote</label>
+      <select id="zona">
+        <option value="estandar">Estándar</option>
+        <option value="intermedia">Intermedia</option>
+        <option value="premium">Premium</option>
+      </select>
+      <ul style="font-size: 0.95rem; margin-top: 0.5rem;"><li><strong>Zona Estándar:</strong> Cerca de perímetro o fondo.</li><li><strong>Zona Intermedia:</strong> Con acceso medio, no en esquina ni en fondo.</li><li><strong>Zona Premium:</strong> Esquina, frente a parque o vialidad principal.</li></ul>
+
+      <button onclick="calcular()">Calcular</button>
+
+      <h3>📊 ¿Cómo calculamos el perfil financiero?</h3>
+      <table style="margin-top: 0.5rem;">
+        <tr><th>Perfil</th><th>Ejemplo</th></tr>
+        <tr><td>Bajo</td><td>Ingreso formal, buen historial</td></tr>
+        <tr><td>Medio</td><td>Ingreso medio, informal parcial</td></tr>
+        <tr><td>Alto</td><td>Sin comprobantes o riesgo alto</td></tr>
+      </table>
+    </div>
+
+    <div class="right">
+      <div class="result" id="resultado">Introduce los datos para ver el resultado.</div>
+      <h3>Plano de lotificación</h3>
+      <img src="plano.png" alt="Plano de lotes">
+    </div>
+  </div>
+  <script>
+    function calcular() {
+      const eng = parseFloat(document.getElementById('enganche').value);
+      const plazo = parseInt(document.getElementById('plazo').value);
+      const riesgo = parseInt(document.getElementById('riesgo').value);
+      const zona = document.getElementById('zona').value;
+
+      let base = 1000000;
+      if (zona === "intermedia") base += 75000;
+      if (zona === "premium") base += 150000;
+      if (riesgo === 3) base += 50000;
+      if (riesgo === 1) base -= 25000;
+
+      const precioFinal = base;
+      document.getElementById('precioBase').innerText = `$${precioFinal.toLocaleString()}`;
+
+      const engancheMonto = precioFinal * (eng / 100);
+      document.getElementById('montoEnganche').innerText = `$${engancheMonto.toLocaleString()}`;
+
+      const montoFinanciar = precioFinal - engancheMonto;
+      const tasa = 0.12;
+      const mensual = (montoFinanciar * (tasa / 12)) / (1 - Math.pow(1 + tasa / 12, -plazo * 12));
+      const totalPagado = mensual * plazo * 12 + engancheMonto;
+      const valorFuturo = precioFinal * Math.pow(1.08, plazo);
+      const ganancia = valorFuturo - totalPagado;
+      const roi = (ganancia / totalPagado) * 100;
+
+      let plan = "Plan Base";
+      if (eng >= 30 && plazo <= 10) plan = "Plan Elite";
+      else if (eng >= 20 && plazo <= 15) plan = "Plan Avance";
+
+      let desc = {
+        "Plan Base": "Acceso con mensualidad cómoda a largo plazo",
+        "Plan Avance": "Equilibrio entre enganche medio y mejores condiciones",
+        "Plan Elite": "Pago acelerado, mejor ROI, bonificaciones especiales"
+      };
+
+      document.getElementById("resultado").innerHTML = `
+        <strong>Recomendación:</strong><br>${plan}<br><em>${desc[plan]}</em><br><br>
+        💰 <strong>Precio final:</strong> $${precioFinal.toLocaleString()}<br>
+        📦 <strong>Enganche:</strong> $${engancheMonto.toLocaleString()}<br>
+        💳 <strong>Mensualidad:</strong> $${mensual.toFixed(2).toLocaleString()}<br>
+        📈 <strong>Valor futuro (con 8% anual):</strong> $${valorFuturo.toFixed(0).toLocaleString()}<br>
+        🔁 <strong>Total pagado:</strong> $${totalPagado.toFixed(0).toLocaleString()}<br>
+        📊 <strong>Ganancia estimada:</strong> $${ganancia.toFixed(0).toLocaleString()}<br>
+        💡 <strong>ROI:</strong> ${roi.toFixed(1)}%
+      `;
+    }
+
+    window.onload = calcular;
+  </script>
+</body>
+</html>
