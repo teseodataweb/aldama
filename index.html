@@ -32,7 +32,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logoblanco.png">
         <link rel="manifest" href="assets/img/favicons/manifest.json">
         <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/assets/img/logoblanco.png">
+        <meta name="msapplication-TileImage" content="/assets/img/logocuadrado.webp">
         <meta name="theme-color" content="#ffffff">
 
         <!--==============================
@@ -258,7 +258,7 @@
                 <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
                 <div class="mobile-logo">
                     <a href="index.html">
-                        <img src="assets/img/logoblanco.png" alt="Logo Aldama">
+                        <img src="assets/img/logocuadrado.webp" alt="Logo Aldama">
                     </a>
                 </div>
                 <div class="th-mobile-menu">
@@ -405,7 +405,7 @@
                             <div class="col-auto">
                                 <div class="header-logo">
                                     <a href="index.html">
-                                        <img src="assets/img/logoblanco.png" alt="LixxusCapital" style="width: 20%;">
+                                        <img src="assets/img/logocuadrado.webp" alt="LixxusCapital" style="width: 40%;">
                                     </a>
                                 </div>
                             </div>
@@ -1145,35 +1145,38 @@
         <!--==============================
     Download Area  
     ==============================-->
-        <section class="download-area-1 space-top overflow-hidden" data-bg-src="assets/img/bg/download-bg-1-1.png" data-opacity="5" data-overlay="title">
-            <div class="container">
-                <div class="row gx-40">
-                    <div class="col-xxl-6 col-lg-7 align-self-center">
-                        <div class="space-bottom text-lg-start text-center">
-                            <div class="title-area mb-30">
-                                <span class="shadow-title">Ubicación</span>
-                                <h2 class="sec-title text-white">A minutos de</h2>
-                                <ul class="sec-text text-white">
-                                    <li><strong>Hospital CMQ -> 5 min</strong></li>
-                                    <li><strong>Macroplaza / Walmart -> 6 min</strong></li>
-                                    <li><strong>Cinepolis -> 3 min</strong></li>
-                                    <li><strong>La Comer / Costco -> 8 min</strong></li>
-                                    <li><strong>Playa más cercana -> 12 min</strong></li>
-                                </ul>
-                            </div>
-                            <div class="btn-wrap justify-content-lg-start justify-content-center">
-                                <a href="https://maps.app.goo.gl/gfKBYF1XVym1JFcK9" class="th-btn btn-mask th-btn-icon">Ver ubicación</a>
-                            </div>
-                        </div>
+    <section class="download-area-1 space-top overflow-hidden" 
+    style="background: url('assets/img/bg/bgverde.webp') no-repeat center center/cover; position: relative; z-index: 1;">
+    <div style="background-color: rgba(0, 0, 0, 0.5); position: absolute; inset: 0; z-index: -1;"></div>
+    <div class="container">
+        <div class="row gx-40">
+            <div class="col-xxl-6 col-lg-7 align-self-center">
+                <div class="space-bottom text-lg-start text-center">
+                    <div class="title-area mb-30">
+                        <span class="shadow-title">Ubicación</span>
+                        <h2 class="sec-title text-white">A minutos de</h2>
+                        <ul class="sec-text text-white">
+                            <li><strong>Hospital CMQ -> 5 min</strong></li>
+                            <li><strong>Macroplaza / Walmart -> 6 min</strong></li>
+                            <li><strong>Cinepolis -> 3 min</strong></li>
+                            <li><strong>La Comer / Costco -> 8 min</strong></li>
+                            <li><strong>Playa más cercana -> 12 min</strong></li>
+                        </ul>
                     </div>
-                    <div class="col-xxl-6 col-lg-5 align-self-end">
-                        <div class="download-thumb text-center">
-                            <img src="assets/img/normal/download_1_1.png" alt="img">
-                        </div>
+                    <div class="btn-wrap justify-content-lg-start justify-content-center">
+                        <a href="https://maps.app.goo.gl/gfKBYF1XVym1JFcK9" class="th-btn btn-mask th-btn-icon">Ver ubicación</a>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="col-xxl-6 col-lg-5 align-self-end">
+                <div class="download-thumb text-center">
+                    <img src="assets/img/normal/download_1_1.png" alt="img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         <!--==============================
 
         Popup Modal v1
@@ -1183,86 +1186,98 @@
     <!--==============================
     Contact Area   
     ==============================-->
-    <div class="space contact-area-3 z-index-common" data-bg-src="assets/img/bg/contact-bg-1-1.png" data-overlay="title" data-opacity="3" id="contact-sec">
-        <div class="contact-bg-shape3-1 spin shape-mockup " data-bottom="5%" data-left="12%">
-            <img src="assets/img/shape/section_shape_2_1.jpg" alt="img">
-        </div>
-        <div class="container" id="form-container">
-            <div class="row gx-35">
-                <div class="col-lg-6">
-                    <div class="appointment-wrap2 bg-white me-xxl-5">
-                        <h2 class="form-title text-theme">Quiero más Información</h2>
-                        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#gracias">
-                            <div class="row">
-                                <div class="form-group style-border style-radius col-12">
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Tu nombre*">
-                                    <i class="fal fa-user"></i>
-                                </div>
-                                <div class="form-group style-border style-radius col-12">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Tu correo electrónico*">
-                                    <i class="fal fa-envelope"></i>
-                                </div>
-                                <div class="form-group style-border style-radius col-md-12">
-                                    <select name="subject" id="subject" class="form-select">
-                                        <option value="" disabled selected hidden>Unidad de interés</option>
-                                        <option value="Real Estate">Roble</option>
-                                        <option value="Apartment">Parota</option>
-                                        <option value="Residencial">Planta Baja</option>
-                                    </select>
-                                    <i class="fal fa-angle-down"></i>
-                                </div>
-                                <div class="form-group style-border style-radius col-12">
-                                    <input type="text" class="form-control" name="city" id="city" placeholder="Tu ciudad*">
-                                    <i class="fal fa-map-marker-alt"></i>
-                                </div>
-                                <div class="form-group style-border style-radius col-12">
-                                    <input type="text" class="form-control" name="cp" id="cp" placeholder="Tu código postal*">
-                                    <i class="fal fa-map-pin"></i>
-                                </div>
-                                <div class="form-group style-border style-radius col-12">
-                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Tu teléfono*">
-                                    <i class="fal fa-phone"></i>
-                                </div>
-                                <div class="col-12 form-group style-border style-radius">
-                                    <i class="far fa-comments"></i>
-                                    <textarea placeholder="Describe tu mensaje" class="form-control"></textarea>
-                                </div>
-                                <div class="col-12 form-btn mt-4">
-                                    <button class="th-btn">Solicitar Información<span class="btn-icon"><img src="assets/img/icon/paper-plane.svg" alt="img"></span></button>
-                                </div>
+    <div class="space contact-area-3 z-index-common" 
+    id="contact-sec">
+    
+    <div style="background-color: rgba(0, 0, 0, 0.3); position: absolute; inset: 0; z-index: -1;"></div>
+    
+    <div class="contact-bg-shape3-1 spin shape-mockup" data-bottom="5%" data-left="12%">
+        <img src="assets/img/shape/section_shape_2_1.jpg" alt="img">
+    </div>
+    
+    <div class="container" id="form-container">
+        <div class="row gx-35">
+            <div class="col-lg-6">
+                <div class="appointment-wrap2 bg-white me-xxl-5">
+                    <h2 class="form-title text-theme">Quiero más Información</h2>
+                    <!-- FORMULARIO -->
+                    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#gracias">
+                        <div class="row">
+                            <div class="form-group style-border style-radius col-12">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Tu nombre*">
+                                <i class="fal fa-user"></i>
                             </div>
-                            <p class="form-messages mb-0 mt-3"></p>
-                        </form>
-                        <!-- Modal de Confirmación -->
-                        <div id="confirmationModal" class="modal">
-                            <div class="modal-content">
+                            <div class="form-group style-border style-radius col-12">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Tu correo electrónico*">
+                                <i class="fal fa-envelope"></i>
+                            </div>
+                            <div class="form-group style-border style-radius col-md-12">
+                                <select name="subject" id="subject" class="form-select">
+                                    <option value="" disabled selected hidden>Unidad de interés</option>
+                                    <option value="Real Estate">Roble</option>
+                                    <option value="Apartment">Parota</option>
+                                    <option value="Residencial">Planta Baja</option>
+                                </select>
+                                <i class="fal fa-angle-down"></i>
+                            </div>
+                            <div class="form-group style-border style-radius col-12">
+                                <input type="text" class="form-control" name="city" id="city" placeholder="Tu ciudad*">
+                                <i class="fal fa-map-marker-alt"></i>
+                            </div>
+                            <div class="form-group style-border style-radius col-12">
+                                <input type="text" class="form-control" name="cp" id="cp" placeholder="Tu código postal*">
+                                <i class="fal fa-map-pin"></i>
+                            </div>
+                            <div class="form-group style-border style-radius col-12">
+                                <input type="text" class="form-control" name="phone" id="phone" placeholder="Tu teléfono*">
+                                <i class="fal fa-phone"></i>
+                            </div>
+                            <div class="col-12 form-group style-border style-radius">
+                                <i class="far fa-comments"></i>
+                                <textarea placeholder="Describe tu mensaje" class="form-control"></textarea>
+                            </div>
+                            <div class="col-12 form-btn mt-4">
+                                <button class="th-btn">Solicitar Información
+                                    <span class="btn-icon">
+                                        <img src="assets/img/icon/paper-plane.svg" alt="img">
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="form-messages mb-0 mt-3"></p>
+                    </form>
+                    <!-- Modal de Confirmación -->
+                    <div id="confirmationModal" class="modal">
+                        <div class="modal-content">
                             <i class="fas fa-check-circle" style="font-size: 48px; color: green;"></i>
                             <h2>¡Correo enviado!</h2>
                             <p>Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.</p>
                             <button class="close-btn" onclick="closeModal()">Cerrar</button>
-                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-        <div class="location-map contact-sec-map z-index-common">
-            <div class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d728881.6442887428!2d-103.921498!3d20.7314927!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84214f00fd45c3b1%3A0xa861be399e679b3f!2sHacienda%20Aldama%20-%20Puerto%20Vallarta!5e1!3m2!1ses!2smx!4v1743871823419!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
-            <div class="location-map-address bg-theme">
-                <div class="thumb">
-                    <img src="assets/img/property/property_inner_1.jpg" alt="img">
-                </div>
-                <div class="media-body">
-                    <h4 class="title">Dirección:</h4>
-                    <p class="text">Aldama 210, Centro Pitillal Puerto Vallarta, Jal.</p>
-                    <h4 class="title">Código Postal:</h4>
-                    <p class="text">48290</p>
-                </div>
+    </div>
+
+    <div class="location-map contact-sec-map z-index-common">
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d728881.6442887428!2d-103.921498!3d20.7314927!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84214f00fd45c3b1%3A0xa861be399e679b3f!2sHacienda%20Aldama%20-%20Puerto%20Vallarta!5e1!3m2!1ses!2smx!4v1743871823419!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="location-map-address bg-theme">
+            <div class="thumb">
+                <img src="assets/img/property/property_inner_1.jpg" alt="img">
+            </div>
+            <div class="media-body">
+                <h4 class="title">Dirección:</h4>
+                <p class="text">Aldama 210, Centro Pitillal Puerto Vallarta, Jal.</p>
+                <h4 class="title">Código Postal:</h4>
+                <p class="text">48290</p>
             </div>
         </div>
     </div>
+</div>
+
 
         <!--==============================
     Testimonial Area  
@@ -1445,7 +1460,7 @@
                         <div class="row gy-2 align-items-center">
                             <div class="col-lg-6">
                                 <p class="copyright-text">
-                                    Copyright <i class="fal fa-copyright"></i> <script>document.write(new Date().getFullYear());</script> <a href="index.html">Lixxs Capital</a>, Todos los derechos Reservados.</p>
+                                    Copyright <i class="fal fa-copyright"></i> <script>document.write(new Date().getFullYear());</script> <a href="https://lixxuscapital.com">Lixxs Capital</a>, Todos los derechos Reservados.</p>
                             </div>
                             <div class="col-lg-6 text-center text-lg-end">
                                 <div class="footer-links">

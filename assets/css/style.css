@@ -89,13 +89,13 @@ Version: 1.0.0
 /*------------------- 1.3. Variable-------------------*/
 :root {
   --theme-color: #363C2B;
-  --theme-color2: #ffffff;
-  --title-color: #0D0D0C;
-  --title-dark: #364440;
+  --theme-color2: #e4e2d6;
+  --title-color: #172F22;
+  --title-dark: #172f22;
   --body-color: #6E7070;
-  --smoke-color: #ffffff;
+  --smoke-color: #E4E2D6;
   --smoke-color2: #666666;
-  --smoke-color3: #C2D6C2;
+  --smoke-color3: #E4E2D6;
   --black-color: #000000;
   --black-color2: #1B1B1B;
   --black-color3: #1A1A1A;
