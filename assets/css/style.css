@@ -103,7 +103,7 @@ Version: 1.0.0
   --gray-color2: #E5E4E9;
   --gray-color3: #F3F5F6;
   --white-color: #ffffff;
-  --light-color: #c5c5c5;
+  --light-color: #ffffff;
   --yellow-color: #E2B93B;
   --success-color: #27AE60;
   --error-color: #EB5757;
@@ -12997,10 +12997,7 @@ ul.comment-list .th-comment-item:first-child > .th-post-comment {
   }
 }
 
-.error-content {
-  max-width: 553px;
-  /* Medium devices */
-}
+
 
 @media (max-width: 991px) {
   .error-content {
