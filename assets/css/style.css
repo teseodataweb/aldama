@@ -163,6 +163,20 @@ iframe {
   width: 100%;
 }
 
+/*SOLD OUT*/
+.property-thumb {
+  position: relative;
+}
+
+.sold-out-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 120px; /* ajusta tamaño según necesidad */
+  z-index: 10;
+  opacity: 0.9;
+}
+/*---------------------*/
 .slick-slide:focus,
 button:focus,
 a:focus,
